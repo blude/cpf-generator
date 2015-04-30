@@ -1,5 +1,5 @@
 # cpf generator
-pequeno script para gerar números de CPF
+Pequeno script para gerar números de CPF.
 
 ## Como usar
 Baixe o arquivo `cpf.js` e no Terminal dê permissão de execução para o arquivo:
