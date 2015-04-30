@@ -17,3 +17,7 @@ $ mv cpf.js /usr/local/bin/cpf
 Pronto! Agora basta digitar `cpf`, sem a extensão mesmo, em qualquer lugar e um novo número de CPF será copiado para a sua área de transferência.
 
 Uhul!
+
+## Requisitos
+
+O node.js deverá estar instalado no seu sistema.
