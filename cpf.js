@@ -8,15 +8,30 @@ var CPFGenerator = (function() {
   var self = {};
 
   function isValid(numbers) {
-    if (numbers !== undefined) {
-      return numbers.toString().length === 9;
+    var invalid_numbers = [
+      '111111111',
+      '222222222',
+      '333333333',
+      '444444444',
+      '555555555',
+      '666666666',
+      '777777777',
+      '888888888',
+      '999999999',
+      '000000000'
+    ];
+    
+    if (numbers === undefined || invalid_numbers.indexOf(numbers) > -1 || numbers.toString().length < 9) {
+      return false;
     }
+    
+    return true;
   }
 
   function random(max) {
     return Math.floor(Math.random() * (max + 1));
   }
-
+  
   function getNumbers() {
     var numbers = [], i = 9;
 
