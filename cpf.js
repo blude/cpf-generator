@@ -21,11 +21,7 @@ var CPFGenerator = (function() {
       '000000000'
     ];
     
-    if (numbers === undefined || invalid_numbers.indexOf(numbers) > -1 || numbers.toString().length < 9) {
-      return false;
-    }
-    
-    return true;
+    return (numbers === undefined || invalid_numbers.indexOf(numbers) > -1 || numbers.toString().length < 9) ? false : true;
   }
 
   function random(max) {
