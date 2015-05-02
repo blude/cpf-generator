@@ -84,7 +84,7 @@ if (cpf !== null) {
         console.log('Não foi possível copiar o CPF \"' + cpf + '\" para a área de transferência.');
         console.log('Erro: ' + stderr);
       } else {
-        console.log('>>> CPF ' + cpf + ' copiado!');
+        console.log('==> CPF ' + cpf + ' copiado!');
       }
       process.exit(0);
     }
