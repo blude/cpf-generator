@@ -5,6 +5,7 @@ Pequeno script para gerar números de CPF.
 Baixe o arquivo `cpf.js` e no Terminal dê permissão de execução para o arquivo:
 
 ```
+$ curl -sS https://raw.githubusercontent.com/blude/cpf-generator/master/cpf.js
 $ chmod +x cpf.js
 ```
 
