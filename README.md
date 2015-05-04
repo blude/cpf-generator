@@ -16,7 +16,15 @@ $ mv cpf.js /usr/local/bin/cpf
 
 Pronto! Agora basta digitar `cpf`, sem a extensão mesmo, em qualquer lugar e um novo número de CPF será copiado para a sua área de transferência.
 
-Uhul!
+## Gerar dígitos verificadores
+
+Você pode gerar um CPF válido a partir de um número inventado, basta passar uma sequência de nove digitos para o comando `cpf`.
+
+```
+$ cpf 111222333
+```
+
+O resultado do comando anterior será o número `111222333-96`.
 
 ## Requisitos
 
