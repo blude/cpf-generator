@@ -88,16 +88,13 @@ var arg = (process.argv[2] || '');
 var cpf = CPFGenerator.make(arg);
 
 if (cpf !== null) {
-  child.exec(
-    ("echo \"" + cpf + "\" | tr -d '\n' | pbcopy"),
-    function(err, stdout, stderr) {
-      if (err) {
-        console.log('Não foi possível copiar o CPF \"' + cpf + '\" para a área de transferência.');
-        console.log('Erro: ' + stderr);
-      } else {
-        console.log('==> CPF ' + cpf + ' copiado!');
-      }
-      process.exit(0);
+  child.exec("echo \"" + cpf + "\" | tr -d '\n' | pbcopy", function(err, stdout, stderr) {
+    if (err) {
+      console.log('Não foi possível copiar o CPF \"' + cpf + '\" para a área de transferência.');
+      console.log('Erro: ' + stderr);
+    } else {
+      console.log('==> CPF ' + cpf + ' copiado!');
     }
-  );
+    process.exit(0);
+  });
 }
