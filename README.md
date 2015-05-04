@@ -11,7 +11,7 @@ $ chmod +x cpf.js
 Em seguida, por conveniencia, mova o arquivo para um local que esteja dentro do seu `PATH`.
 
 ```
-$ sudo mv cpf.js /usr/local/bin/cpf
+$ mv cpf.js /usr/local/bin/cpf
 ```
 
 Pronto! Agora basta digitar `cpf`, sem a extensão mesmo, em qualquer lugar e um novo número de CPF será copiado para a sua área de transferência.
