@@ -71,10 +71,11 @@ var CPFGenerator = (function() {
     if (isValid(numbers)) return getVerificationDigits(numbers);
   };
   
-  self.make = function(numbers) {
+  self.make = function(numbers, withSeparator) {
+    var separator = withSeparator || '-';
     numbers = numbers || getNumbers();
     if (isValid(numbers)) {
-      return [numbers, '-', getVerificationDigits(numbers)].join('');
+      return [numbers, separator, getVerificationDigits(numbers)].join('');
     } else {
       console.log('Erro: o número deve conter 9 digitos.');
       return null;
@@ -85,7 +86,7 @@ var CPFGenerator = (function() {
 }());
 
 var arg = (process.argv[2] || '');
-var cpf = CPFGenerator.make(arg);
+var cpf = CPFGenerator.make(arg, false);
 
 if (cpf !== null) {
   child.exec("echo \"" + cpf + "\" | tr -d '\n' | pbcopy", function(err, stdout, stderr) {
