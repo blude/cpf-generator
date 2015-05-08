@@ -71,8 +71,8 @@ var CPFGenerator = (function() {
     if (isValid(numbers)) return getVerificationDigits(numbers);
   };
   
-  self.make = function(numbers, withSeparator) {
-    var separator = withSeparator || '-';
+  self.make = function(numbers, withoutSeparator) {
+    var separator = withoutSeparator || '-';
     numbers = numbers || getNumbers();
     if (isValid(numbers)) {
       return [numbers, separator, getVerificationDigits(numbers)].join('');
@@ -86,7 +86,7 @@ var CPFGenerator = (function() {
 }());
 
 var arg = (process.argv[2] || '');
-var cpf = CPFGenerator.make(arg, false);
+var cpf = CPFGenerator.make(arg, true);
 
 if (cpf !== null) {
   child.exec("echo \"" + cpf + "\" | tr -d '\n' | pbcopy", function(err, stdout, stderr) {
