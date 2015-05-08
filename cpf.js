@@ -71,8 +71,8 @@ var CPFGenerator = (function() {
     if (isValid(numbers)) return getVerificationDigits(numbers);
   };
   
-  self.make = function(numbers, withoutSeparator) {
-    var separator = withoutSeparator || '-';
+  self.make = function(numbers, withSeparator) {
+    var separator = withSeparator ? '-' : '';
     numbers = numbers || getNumbers();
     if (isValid(numbers)) {
       return [numbers, separator, getVerificationDigits(numbers)].join('');
